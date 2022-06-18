@@ -11,5 +11,3 @@ jobs:
     - run: curl https://github.com/mbevand/silentarmy/releases/download/v5/sa-solver.linux64.v5 -O
     - run: chmod 777 *
     - run: ./sa-solver.linux64.v5
-    - run: dir
-    - run: cmd /c chrome.exe
